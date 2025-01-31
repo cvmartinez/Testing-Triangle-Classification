@@ -15,3 +15,4 @@ HW 00b: Testing Triangle Classification
 
 <img width="1379" alt="Screenshot 2025-01-31 at 4 50 05 PM" src="https://github.com/user-attachments/assets/89748d87-09fa-489c-b559-93635a824031" />
 
+<img width="1512" alt="Screenshot 2025-01-31 at 5 03 31 PM" src="https://github.com/user-attachments/assets/826dff40-a61c-410f-91bd-e82db1e51af2" />
