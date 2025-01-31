@@ -12,3 +12,5 @@ HW 00b: Testing Triangle Classification
 
 # Describe the criteria you used to determine that you had sufficient test cases, i.e. how did you know you were done? 
   * I made a test case for each requirement: equilateral, isosceles, scalene, and right triangles. I also changed each test case to 0 to see if it would fail.  
+
+<img width="1379" alt="Screenshot 2025-01-31 at 4 50 05 PM" src="https://github.com/user-attachments/assets/3b5fb251-cfb7-416f-aa1c-b4c2f522e09c" />
