@@ -1,22 +1,17 @@
 import math
 
 
-def classify_triangle(a: float, b: float, c: float) -> str:
+def classify_triangle(a, b, c):
 
-
-    # Validate input (all sides should be positive)
-    if a <= 0 or b <= 0 or c <= 0:
-        return "Invalid input"
-
-    # Sort sides for easier right-triangle checking
+    # First, sort the sides to make it easier to check for right triangles
     sides = sorted([a, b, c])
-    x, y, z = sides  # x and y are the shortest, z is the longest
+    x, y, z = sides  # x and y are the smaller sides, z is the longest
 
-    # Check if it's a valid triangle
+    # Check if the sides form a valid triangle (Triangle Inequality Theorem)
     if x + y <= z:
         return "Not a triangle"
 
-    # Determine triangle type
+    # Determine the type of triangle
     if a == b == c:
         triangle_type = "Equilateral"
     elif a == b or b == c or a == c:
@@ -24,8 +19,16 @@ def classify_triangle(a: float, b: float, c: float) -> str:
     else:
         triangle_type = "Scalene"
 
-    # Check for right triangle using Pythagorean theorem (Used AI)
-    if math.isclose(x ** 2 + y ** 2, z ** 2, rel_tol=1e-9):
+    # Check if it's a right triangle using the Pythagorean Theorem (a² + b² = c²)
+    if x ** 2 + y ** 2 == z ** 2:
         triangle_type += " and Right"
 
     return triangle_type
+
+
+# Example usage:
+if __name__ == "__main__":
+    print(classify_triangle(3, 4, 5))  # Should print: "Scalene and Right"
+    print(classify_triangle(5, 5, 5))  # Should print: "Equilateral"
+    print(classify_triangle(2, 2, 3))  # Should print: "Isosceles"
+    print(classify_triangle(1, 2, 3))  # Should print: "Not a triangle"
